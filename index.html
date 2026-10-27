@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Для тебя, Аделина 🌹</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Падающие частицы -->
+  <div id="particles-container"></div>
+
+  <!-- НАВИГАЦИЯ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero"    class="nav__link">🌹 Главная</a>
+      <a href="#photos"  class="nav__link">📷 Фото</a>
+      <a href="#music"   class="nav__link">🎵 Музыка</a>
+      <a href="#reasons" class="nav__link">💖 Причины</a>
+      <a href="#wishes"  class="nav__link">✨ Желания</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-overlay-gradient"></div>
+    <div class="hero__inner">
+      <div class="rose-decoration top-left">🌹</div>
+      <div class="rose-decoration top-right">🌹</div>
+
+      <!-- Текст -->
+      <div class="hero__text">
+        <p class="hero__subtitle">Специально для тебя</p>
+        <h1 class="hero__title">Аделина</h1>
+        <div class="hearts-row">
+          <span>❤️</span><span>🌹</span><span>❤️</span>
+        </div>
+        <p class="hero__tagline">Ты — моё самое любимое место на земле</p>
+        <p class="hero__distance">💫 Расстояние — это просто цифры, а ты — в моём сердце всегда 💫</p>
+        <a href="#photos" class="btn-scroll">
+          <span>Открыть</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Фото-карточка -->
+      <div class="hero__photo-card">
+        <div class="hero__photo-glow"></div>
+        <img src="images/39.jpeg" alt="Аделина" class="hero__photo-img" />
+        <div class="hero__photo-shine"></div>
+        <div class="hero__photo-label">🌹 Аделина 🌹</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ГАЛЕРЕЯ — 3D КАРУСЕЛЬ -->
+  <section class="photos-section" id="photos">
+    <div class="section-header">
+      <h2 class="section-title">Наши моменты</h2>
+      <div class="section-divider"><span>🌹</span><span class="divider-line"></span><span>🌹</span></div>
+    </div>
+    <div class="carousel-3d-wrapper">
+      <div class="carousel-3d" id="carousel3d">
+        <div class="c3d-item" data-index="0"><img src="images/15.jpeg" alt="фото 1" /><div class="c3d-shine"></div></div>
+        <div class="c3d-item" data-index="1"><img src="images/21.jpeg" alt="фото 2" /><div class="c3d-shine"></div></div>
+        <div class="c3d-item" data-index="2"><img src="images/22.jpeg" alt="фото 3" /><div class="c3d-shine"></div></div>
+        <div class="c3d-item" data-index="3"><img src="images/26.jpeg" alt="фото 4" /><div class="c3d-shine"></div></div>
+        <div class="c3d-item" data-index="4"><img src="images/32.jpeg" alt="фото 5" /><div class="c3d-shine"></div></div>
+        <div class="c3d-item" data-index="5"><img src="images/33.jpeg" alt="фото 6" /><div class="c3d-shine"></div></div>
+        <div class="c3d-item" data-index="6"><img src="images/34.jpeg" alt="фото 7" /><div class="c3d-shine"></div></div>
+        <div class="c3d-item" data-index="7"><img src="images/35.jpeg" alt="фото 8" /><div class="c3d-shine"></div></div>
+        <div class="c3d-item" data-index="8"><img src="images/38.jpeg" alt="фото 9" /><div class="c3d-shine"></div></div>
+        <div class="c3d-item" data-index="9"><img src="images/39.jpeg" alt="фото 10" /><div class="c3d-shine"></div></div>
+        <div class="c3d-item" data-index="10"><img src="images/7.jpeg"  alt="фото 11" /><div class="c3d-shine"></div></div>
+        <div class="c3d-item" data-index="11"><img src="images/9.jpeg"  alt="фото 12" /><div class="c3d-shine"></div></div>
+      </div>
+      <button class="c3d-btn c3d-btn--prev" id="c3dPrev" aria-label="Назад">&#8249;</button>
+      <button class="c3d-btn c3d-btn--next" id="c3dNext" aria-label="Вперёд">&#8250;</button>
+    </div>
+    <div class="c3d-dots" id="c3dDots"></div>
+  </section>
+
+  <!-- МУЗЫКА -->
+  <section class="music-section" id="music">
+    <div class="section-header">
+      <h2 class="section-title">Наша музыка</h2>
+      <div class="section-divider"><span>🎵</span><span class="divider-line"></span><span>🎵</span></div>
+    </div>
+
+    <div class="music-player">
+      <!-- Виниловая пластинка -->
+      <div class="vinyl-wrapper">
+        <div class="vinyl" id="vinyl">
+          <div class="vinyl__label">
+            <span class="vinyl__note">♪</span>
+          </div>
+        </div>
+        <div class="vinyl__needle" id="vinylNeedle"></div>
+      </div>
+
+      <!-- Инфо о треке -->
+      <div class="track-info">
+        <p class="track-num" id="trackNum">01 / 05</p>
+        <h3 class="track-title" id="trackTitle">Сени сагынам</h3>
+        <p class="track-sub" id="trackSub">♪ Нажми play</p>
+      </div>
+
+      <!-- Контролы -->
+      <div class="player-controls">
+        <button class="ctrl-btn ctrl-prev" id="ctrlPrev" aria-label="Предыдущий">&#9664;&#9664;</button>
+        <button class="ctrl-btn ctrl-play" id="ctrlPlay" aria-label="Play/Pause">&#9654;</button>
+        <button class="ctrl-btn ctrl-next" id="ctrlNext" aria-label="Следующий">&#9654;&#9654;</button>
+      </div>
+
+      <!-- Список треков -->
+      <ul class="track-list" id="trackList">
+        <li class="track-item active" data-index="0">
+          <span class="track-item__num">01</span>
+          <span class="track-item__name">Сени сагынам</span>
+          <span class="track-item__icon">🎵</span>
+        </li>
+        <li class="track-item" data-index="1">
+          <span class="track-item__num">02</span>
+          <span class="track-item__name">Акыркы жолугуу</span>
+          <span class="track-item__icon">🎵</span>
+        </li>
+        <li class="track-item" data-index="2">
+          <span class="track-item__num">03</span>
+          <span class="track-item__name">Ты словно целая вселенная</span>
+          <span class="track-item__icon">🎵</span>
+        </li>
+        <li class="track-item" data-index="3">
+          <span class="track-item__num">04</span>
+          <span class="track-item__name">Весенний снегопад</span>
+          <span class="track-item__icon">🎵</span>
+        </li>
+        <li class="track-item" data-index="4">
+          <span class="track-item__num">05</span>
+          <span class="track-item__name">Кетким келбей</span>
+          <span class="track-item__icon">🎵</span>
+        </li>
+      </ul>
+
+      <!-- Скрытый YouTube плеер -->
+      <div id="ytPlayerContainer" style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;bottom:0;left:0;">
+        <div id="ytPlayer"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 100+ ПРИЧИН -->
+  <section class="reasons-section" id="reasons">
+    <div class="section-header">
+      <h2 class="section-title">100+ причин, почему я люблю тебя</h2>
+      <div class="section-divider"><span>💖</span><span class="divider-line"></span><span>💖</span></div>
+      <p class="section-sub">Мы на расстоянии — но каждая из этих причин со мной каждый день</p>
+    </div>
+
+    <div class="reasons-carousel-wrapper">
+      <div class="reasons-carousel" id="reasonsCarousel">
+        <!-- Карточки генерируются JS -->
+      </div>
+      <button class="rc-btn rc-btn--prev" id="rcPrev" aria-label="Назад">&#8249;</button>
+      <button class="rc-btn rc-btn--next" id="rcNext" aria-label="Вперёд">&#8250;</button>
+    </div>
+    <div class="rc-counter" id="rcCounter">1 / 108</div>
+  </section>
+
+  <!-- ЖЕЛАНИЯ -->
+  <section class="wishes-section" id="wishes">
+    <div class="section-header">
+      <h2 class="section-title">Загадай желание</h2>
+      <div class="section-divider"><span>✨</span><span class="divider-line"></span><span>✨</span></div>
+      <p class="section-sub">Напиши что хочешь — это останется между нами 🌙</p>
+    </div>
+
+    <div class="wish-form-wrapper">
+      <div class="wish-form-card">
+        <div class="wish-stars">✨ 🌙 ✨</div>
+        <textarea
+          id="wishText"
+          class="wish-textarea"
+          placeholder="Напиши своё желание... всё что хочешь 🌹"
+          maxlength="500"
+          rows="5"
+        ></textarea>
+        <div class="wish-meta">
+          <span class="wish-counter" id="wishCounter">0 / 500</span>
+        </div>
+        <button class="wish-btn" id="wishBtn">
+          <span class="wish-btn__text">Отправить желание 🌙</span>
+          <span class="wish-btn__loading" style="display:none">Отправляю...</span>
+        </button>
+        <div class="wish-status" id="wishStatus"></div>
+      </div>
+    </div>
+  </section>
+  <section class="message-section" id="message">
+    <div class="message-section__inner">
+      <div class="message-card">
+        <div class="message-card__decoration">❤️</div>
+        <h2 class="message-card__title">Моя дорогая Аделина</h2>
+        <div class="message-card__divider">
+          <span>🌹</span><span class="line"></span><span>🌹</span>
+        </div>
+        <p class="message-card__text">
+          Есть люди, встреча с которыми меняет всё. Ты — именно такой человек.
+          С тобой мир становится теплее, ярче и добрее. Каждый момент рядом с тобой — это подарок,
+          который я берегу в самом сердце.
+        </p>
+        <p class="message-card__text">
+          Расстояние между нами — это просто километры. Но то, что я чувствую к тебе,
+          не знает никаких границ. Я думаю о тебе каждый день, каждую минуту.
+        </p>
+        <p class="message-card__text">
+          Ты красива так, как бывают красивы только те, кто красив изнутри —
+          искренне, по-настоящему, без притворства. Твоя улыбка — моё любимое место во вселенной.
+        </p>
+        <div class="message-card__signature">С любовью&nbsp;❤️</div>
+        <div class="message-card__decoration bottom">🌹</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ФИНАЛ -->
+  <section class="finale-section">
+    <div class="finale-section__inner">
+      <div class="finale-hearts">❤️ 🌹 ❤️</div>
+      <h2 class="finale-title">Люблю тебя, Аделина</h2>
+      <p class="finale-subtitle">Всегда и навсегда 🌹</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
